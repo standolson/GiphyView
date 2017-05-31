@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context="com.niketest.giphyview.ui.GiphyPhotoViewActivity" >
+
+	<android.support.design.widget.AppBarLayout
+		android:id="@+id/toolbar_layout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:theme="@style/AppTheme.AppBarOverlay">
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			android:background="?attr/colorPrimary"
+			app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+	</android.support.design.widget.AppBarLayout>
+
+	<!-- Put the actual content in a ScrollView so we can handle absurdly tall photos -->
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_below="@+id/toolbar_layout" >
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical" >
+
+			<ImageView
+				android:id="@+id/giphy_photo"
+				android:adjustViewBounds="true"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:paddingBottom="@dimen/simple_padding"
+				android:src="@drawable/placeholder" />
+
+			<TextView
+				android:id="@+id/giphy_user_displayname"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/simple_padding"
+				android:gravity="center"
+				tools:text="Display Name: Foobar" />
+
+			<TextView
+				android:id="@+id/giphy_rating"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/simple_padding"
+				android:gravity="center"
+				tools:text="Rating: PG" />
+
+			<TextView
+				android:id="@+id/giphy_source"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/simple_padding"
+				android:gravity="center"
+				tools:text="Source: www.nike.com" />
+
+			<TextView
+				android:id="@+id/giphy_size"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:padding="@dimen/simple_padding"
+				android:gravity="center"
+				tools:text="Size: 200x200" />
+		</LinearLayout>
+	</ScrollView>
+</RelativeLayout>

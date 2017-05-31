@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GiphyView/GiphyView.iml" filepath="$PROJECT_DIR$/GiphyView/GiphyView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/niketest.iml" filepath="$PROJECT_DIR$/niketest.iml" />
+    </modules>
+  </component>
+</project>
