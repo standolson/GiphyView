@@ -46,7 +46,8 @@ public class GiphyPhotoAdapter extends RecyclerView.Adapter<GiphyPhotoViewHolder
 			holder.imageView.setTag(R.id.giphy_photo_tag, photo);
 			Glide.with(context)
 				.load(photo.getFixedHeightUrl())
-				.into(holder.imageView);
+				.into(holder.imageView)
+				.onLoadFailed(context.getDrawable(R.drawable.placeholder));
 		}
 	}
 
